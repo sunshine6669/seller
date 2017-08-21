@@ -1,7 +1,7 @@
 <template>
   <div class="countControl">
     <transition name="move">
-         <div class="count-reduce" v-show="food.count>0" @click="reduceNum($event)">
+         <div class="count-reduce" v-show="food.count>0" @click.stop.prevent="reduceNum($event)">
             <i class="icon-remove_circle_outline icon-reduce"></i>
          </div>
     </transition>

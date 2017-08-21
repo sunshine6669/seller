@@ -9,6 +9,17 @@ border_1px($bcolor)
         content: ''
         display: block
 
+border_1pxtop($bcolor)
+    position: relative
+    &::before
+        position: absolute
+        width: 100%
+        bottom: 0px
+        left: 0px
+        border-top: 1px solid $bcolor
+        content: ''
+        display: block
+
 border_none()
      &::after
         display:none
