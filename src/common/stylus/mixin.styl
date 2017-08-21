@@ -1,0 +1,22 @@
+border_1px($bcolor)
+    position: relative
+    &::after
+        position: absolute
+        width: 100%
+        bottom: 0px
+        left: 0px
+        border-bottom: 1px solid $bcolor
+        content: ''
+        display: block
+
+border_none()
+     &::after
+        display:none
+bg_icon($url)
+    background-image: url($url+'@2x.png')
+    background-repeat: no-repeat
+    @media (-webkit-min-device-pixel-ratio:3),(min-device-pixel-ratio:3)
+        background-image: url($url+'@3x.png')
+        background-repeat: no-repeat
+
+
